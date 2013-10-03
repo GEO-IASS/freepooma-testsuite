@@ -1,0 +1,20 @@
+./particle_bench3.exe> Starting Particles benchmark.
+./particle_bench3.exe> -----------------------------------
+./particle_bench3.exe>               Iterations: 1000
+./particle_bench3.exe>   Starting particle size: 100
+./particle_bench3.exe>     Ending particle size: 10000
+./particle_bench3.exe> Particle size multiplier: 10
+./particle_bench3.exe> Fraction moving off edge: 0.1
+./particle_bench3.exe> -----------------------------------
+./particle_bench3.exe> For 100 particles, 1000 iterations:
+./particle_bench3.exe>     Computation time: 7.24674
+./particle_bench3.exe>   Computation MFLOPS: 1.10394
+./particle_bench3.exe>              BC time: 0.127523
+./particle_bench3.exe>            Swap time: 2.05019
+./particle_bench3.exe> -----------------------------------
+./particle_bench3.exe> For 1000 particles, 1000 iterations:
+./particle_bench3.exe>     Computation time: 28.0715
+./particle_bench3.exe>   Computation MFLOPS: 2.84987
+./particle_bench3.exe>              BC time: 0.670322
+./particle_bench3.exe>            Swap time: 10.6121
+./particle_bench3.exe> -----------------------------------

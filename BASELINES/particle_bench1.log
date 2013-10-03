@@ -1,0 +1,14 @@
+./particle_bench1.exe> Starting Particles benchmark.
+./particle_bench1.exe> -----------------------------------
+./particle_bench1.exe>               Iterations: 1000
+./particle_bench1.exe>   Starting particle size: 100
+./particle_bench1.exe>     Ending particle size: 10000
+./particle_bench1.exe> Particle size multiplier: 10
+./particle_bench1.exe> Fraction moving off edge: 0.1
+./particle_bench1.exe> -----------------------------------
+./particle_bench1.exe> For 100 particles, 1000 iterations:
+./particle_bench1.exe>     Computation time: 9.68186
+./particle_bench1.exe>   Computation MFLOPS: 0.826287
+./particle_bench1.exe>              BC time: 0.20572
+./particle_bench1.exe>            Swap time: 2.35274
+./particle_bench1.exe> -----------------------------------

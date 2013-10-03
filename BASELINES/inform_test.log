@@ -1,0 +1,26 @@
+POOMA-II:A> ------
+POOMA-II:A> 
+POOMA-II:A> This should have a leading and following blank line.
+POOMA-II:A> 
+POOMA-II:A> ------
+POOMA-II:B> ------
+POOMA-II:B> 
+POOMA-II:B> This should have a leading and following blank line.
+POOMA-II:B> 
+POOMA-II:B> ------
+POOMA-II:A> Interval X = [1:5:1], with no endl, just flush
+POOMA-II:A> ###2: should be ###2
+POOMA-II:B> 1234 = 4d2 (hex), 2322 (oct)
+POOMA-II:B> This line should only appear once.
+POOMA-II:A> 
+POOMA-II:A> 
+POOMA-II:A> There should be two blank lines, then this.
+POOMA-II:A> 
+POOMA-II:A> The file 'inform_test.dat' should contain copies of all the lines written to the 'A' stream.
+PASSED
+POOMA-II:B> ------
+POOMA-II:B> 
+POOMA-II:B> This should have a leading and following blank line.
+POOMA-II:B> 
+POOMA-II:B> ------
+POOMA-II:B> 1234 = 4d2 (hex), 2322 (oct)

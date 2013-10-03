@@ -1,0 +1,28 @@
+#! /bin/csh
+
+# run the program with the given arguments
+echo "-------------------------------------------"
+echo "Running script to invoke PAWS applications"
+echo "Arguments = $*"
+echo "-------------------------------------------"
+
+set workdir = $1 ; shift
+
+echo "Changing to directory $workdir ..."
+cd $workdir
+echo "-------------------------------------------"
+
+echo "Running command $* ..."
+echo "-------------------------------------------"
+$*
+
+# start a shell; exiting from this will quit the script
+/bin/csh
+
+
+# ACL:rcsinfo
+#  ----------------------------------------------------------------------
+#  $RCSfile: keepit,v $   $Author: richard $
+#  $Revision: 1.2 $   $Date: 2004/11/01 18:16:23 $
+#  ----------------------------------------------------------------------
+# ACL:rcsinfo

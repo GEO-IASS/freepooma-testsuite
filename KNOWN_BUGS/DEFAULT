@@ -1,0 +1,98 @@
+bytefield : bug harness :: -O0 -O1 -O2 -O3 :: link only test
+#array_test18 : bug 11350 :: -gnu4 :: ### POOMA Assertion Failure ##
+#dynamic_array_test5 : bug gcc4.1 :: -gnu4 :: test also fails on eng-19
+#FieldTour1 : bug gcc4.1 :: -gnu4 :: test also fails on eng-18
+#FileSetWriterTest1 : bug 11343 :: -gnu4 :: runtime seg. fault
+#FileSetWriterTest2 : bug 11343 :: -gnu4 :: runtime seg. fault
+#TestDataBrowser : bug gcc4.1 :: -gnu4 :: test also fails on eng-18
+#array_test19 : bug 11343 :: -gnu4 :: runtime seg. fault
+#array_test27 : bug 11343 :: -gnu4 :: runtime seg. fault
+#array_test28 : bug 11343 :: -gnu4 :: runtime seg. fault
+#array_test29 : bug gcc4.1 :: -gnu4 :: test also fails on eng-18
+#array_test7 : bug 11343 :: -gnu4 :: runtime seg. fault
+#bctest2 : bug gcc4.1 :: -gnu4 :: test also fails on eng-18
+#dbptr_test4 : bug 11343 :: -gnu4 :: runtime seg. fault
+#particle_bench1 : bug gcc4.1 :: -gnu4 :: test also fails on eng-18
+#particle_bench2 : bug gcc4.1 :: -gnu4 :: test also fails on eng-18
+#particle_bench3 : bug gcc4.1 :: -gnu4 :: test also fails on eng-18
+#particle_bench4 : bug gcc4.1 :: -gnu4 :: test also fails on eng-18
+FileSetReaderTest1 : bug gcc :: -m32 :: Floating point exception on ia32
+FileSetReaderTest2 : bug gcc :: -m32 :: Floating point exception on ia32
+gridlayout_test  : bug 11360 :: -gnu4 :: seg. fault on ia32 with -apo
+bytefield : bug LinkOnly :: -gnu4 :: link only test; qa harness error
+#array_test5 : bug 11472 :: -gnu4 :: only on athlon machine
+#array_test18 : bug 11543 :: -gnu4 :: POOMA Assertion Failure  on athlon
+#array_test19 : bug 11543 :: -gnu4 :: POOMA Assertion Failure  on athlon
+#array_test7 : bug 11545 :: -gnu4 :: seg. fault on athlon
+#array_test27 : bug 11545 :: -gnu4 :: seg. fault on athlon
+#array_test28 : bug 11545 :: -gnu4 :: seg. fault on athlon
+#dbptr_test4 : bug 11547 :: -gnu4 :: test fail at athlon
+#VectorBroadcastTest : bug 8804 :: -ipa :: linktime error with -m32 -ipa
+#particle_test1 : bug 8804 :: -ipa :: linktime error with -m32 -ipa
+#assert_test1 : bug 8804 :: -ipa :: link error with -m32 -O0 -ipa
+#rcptr_test1 : bug 8804 :: -ipa :: link error with -m32 -O0 -ipa
+#ReductionTest2 : bug 8804 :: -ipa :: linktime error with -m32 -ipa
+bctest3 : bug 11992 :: -m32 :: workaround flag -fno-exceptions
+#destroy : bug 11992 :: -m32 :: workaround flag -fno-exceptions
+#dynamic_array_test1 : bug 11992 :: -O0 -O1 -O2 -O3 :: workaround flag -fno-exceptions
+#dynamic_test2 : bug 11992 :: -O0 -O1 -O2 -O3 :: workaround flag -fno-exceptions
+#Reactor_Exceptions_Test : bug 11992 :: -m32 -m64 :: workaround flag -fno-exceptions
+#Auto_IncDec_Test : bug 11992 :: -m32 -m64  :: workaround flag -fno-exceptions
+#Reactors_Test : bug 11992 :: -m32 -m64  :: workaround flag -fno-exceptions
+#Task_Ex_Test : bug 11992 :: -m32 -m64  :: workaround flag -fno-exceptions
+#particle_test1 : bug 11992 :: -m32 :: workaround flag -fno-exceptions
+#particle_test2 : bug 11992 :: -m32 :: workaround flag -fno-exceptions
+#particle_test3 : bug 11992 :: -m32 :: workaround flag -fno-exceptions
+#particle_test4 : bug 11992 :: -m32 :: workaround flag -fno-exceptions
+#array_test30 : bug 11992 :: -m32 :: workaround flag -fno-exceptions
+#evaluatorTest2 : bug 11992_13605(mp) :: -m32 :: workaround flag -fno-exceptions
+#array_test22 : bug 8044 :: ( -m32 -O3 ) :: on eng-18 with -m32
+array_test24 : bug 8044 :: ( -m32 -O3 ) :: on eng-18 with -m32
+t1 : bug 8044 :: ( -m32 -O3 ) :: on eng-18 with -m32
+#Benchmark.cmpl : bug 12058 :: -mcpu=anyx86 :: GRA regression in mainline2193
+#LocalPatch : bug 12085 :: (-m32 -O3) :: runtime seg. fault
+#array_test18 : bug 12085 :: (-m32 -O3) :: runtime seg. fault
+#dynamic_array_test3 : bug 12085 :: (-m32 -O3) :: runtime seg. fault
+#dynamic_array_test4 : bug 12085 :: (-m32 -O3) :: runtime seg. fault
+#dynamic_array_test1 : bug 12216_wonfix :: -O0 -O1 -02 -O3 :: add -PHASE:w=off 
+dynamic_test2 : bug 12216 :: -O0 -O1 -O2 -O3  :: crashes in Code_Expansion
+#interpolate : bug 12669 :: -gnu42 -g :: seg. fault in assembly
+#spatial : bug 12821 :: -gnu42 :: incorrect runtime results
+#uniform : bug 12821 :: -gnu42 :: incorrect runtime results
+#bctest3 : bug 12821 :: -gnu42 :: incorrect runtime results
+#destroy : bug 12821 :: -gnu42 :: incorrect runtime results
+#particle_test2 : bug 12821 :: -gnu42 :: incorrect runtime results
+#particle_test4 : bug 12821 :: -gnu42 :: incorrect runtime results
+#spatial : bug 12821 :: -gnu42 :: incorrect runtime results
+#uniform : bug 12821 :: -gnu42 :: incorrect runtime results
+array_test30 : bug 13605 :: -mp :: fails -O3; workaround -PHASE:l=off 
+dynamic_array_test1 : bug 13605 :: -mp -O3 :: fails -O3; workaround -PHASE:l=off
+evaluatorTest2 : bug 13605 :: -mp :: fails -O3; workaround -PHASE:l=off
+particle_test2 : bug 13605 :: -mp :: fails -O3; workaround -PHASE:l=off
+particle_test4 : bug 13605 :: -mp :: fails -O3; workaround -PHASE:l=off
+rngArray : bug 13714 :: -mp :: fails on eng-63
+#ScalarCode : bug 14202 :: -ipa -O3 :: workaround -INLINE=off; fail -O3 -ipa
+ScalarCode : bug 14877 :: -O1 :: runtime seg. fault
+#array_test19 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#array_test28 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#array_test30 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#array_test7 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#array_test7 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#evaluatorTest2 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#FileSetReaderTest2 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#FileSetWriterTest1 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#FileSetWriterTest2 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#gmp_test4 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#Gradient : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#OffsetReduction : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#rngArray : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#ScalarCode : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+##sparsetilelayout_test : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#StencilTests : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#ump_test3 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#ump_test5 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#ump_test6 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#ump_test8 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#ump_test9 : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#VectorTest : bug 14219 :: -mp :: ### POOMA Assertion Failure ###
+#WhereTest : bug 14219 :: -mp :: ### POOMA Assertion Failure ###

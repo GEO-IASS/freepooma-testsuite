@@ -1,0 +1,177 @@
+prefix
+-----
+TEXT = "
+#include <cstdlib>
+#include <cmath>
+
+#if defined(POOMA_POOMA_POOMAOPERATORTAGS_H)
+template<int D, class T, class EngineTag> class Tensor;
+
+template<class OutputEngineTag, int D, class T, class EngineTag>
+Tensor<D, T, OutputEngineTag>
+symmetrize(const Tensor<D, T, EngineTag> &x);
+#endif"
+
+unarySpecialOps
+-----
+  TAG      = "FnReal"
+  FUNCTION = "real"
+  EXPR     = "return (real(a));"
+-----
+  TAG      = "FnImag"
+  FUNCTION = "imag"
+  EXPR     = "return (imag(a));"
+-----
+  TAG      = "FnAbs"
+  FUNCTION = "abs"
+  EXPR     = "return (std::abs(a));"
+-----
+  TAG      = "FnArg"
+  FUNCTION = "arg"
+  EXPR     = "return (arg(a));"
+-----
+  TAG      = "FnNorm"
+  FUNCTION = "norm"
+  EXPR     = "return (norm(a));"
+-----
+  TAG      = "FnConj"
+  FUNCTION = "conj"
+  EXPR     = "return (conj(a));"
+-----
+  TAG      = "FnPow2"
+  FUNCTION = "pow2"
+  EXPR     = "return (a*a);"
+-----
+  TAG      = "FnPow3"
+  FUNCTION = "pow3"
+  EXPR     = "return (a*a*a);"
+-----
+  TAG      = "FnPow4"
+  FUNCTION = "pow4"
+  EXPR     = "return (a*a*a*a);"
+-----
+  TAG      = "FnMagnitude"
+  FUNCTION = "magnitude"
+  EXPR     = "return (magnitude(a));"
+-----
+  TAG      = "FnTrace"
+  FUNCTION = "trace"
+  EXPR     = "return (trace(a));"
+-----
+  TAG      = "FnDet"
+  FUNCTION = "det"
+  EXPR     = "return (det(a));"
+-----
+  TAG      = "FnTranspose"
+  FUNCTION = "transpose"
+  EXPR     = "return (transpose(a));"
+-----
+  ARG      = "class OutputSymmetry"
+  TAG      = "FnSymmetrize<OutputSymmetry>"
+  FUNCTION = "symmetrize"
+  EXPR     = "return (symmetrize<OutputSymmetry>(a));"
+
+binaryOps
+-----
+  TAG      = "FnDot"
+  FUNCTION = "dot"
+  EXPR     = "return dot(a,b);"
+-----
+  TAG      = "FnPolar"
+  FUNCTION = "polar"
+  EXPR     = "return (polar(a,b));"
+-----
+  TAG      = "FnOuterProduct"
+  FUNCTION = "outerProduct"
+  EXPR     = "return (outerProduct(a,b));"
+-----
+  TAG      = "FnOuterProductAsTinyMatrix"
+  FUNCTION = "outerProductAsTinyMatrix"
+  EXPR     = "return (outerProductAsTinyMatrix(a,b));"
+-----
+  TAG      = "FnDotDot"
+  FUNCTION = "dotdot"
+  EXPR     = "return (dotdot(a,b));"
+-----
+  TAG      = "FnMin"
+  FUNCTION = "min"
+  EXPR     = "return 
+#if POOMA_NO_STD_MIN_MAX
+        (a<b?a:b)
+#else
+        std::min(a, b)
+#endif
+;"
+-----
+  TAG      = "FnMax"
+  FUNCTION = "max"
+  EXPR     = "return 
+#if POOMA_NO_STD_MIN_MAX
+        (a>b?a:b)
+#else
+        std::max(a, b)
+#endif
+;"
+
+binaryBoolOps
+-----
+  TAG = "OpLT2"
+  FUNCTION = "LT"
+  EXPR = "return (a < b);"
+-----
+  TAG = "OpLE2"
+  FUNCTION = "LE"
+  EXPR = "return (a <= b);"
+-----
+  TAG = "OpGT2"
+  FUNCTION = "GT"
+  EXPR = "return (a > b);"
+-----
+  TAG = "OpGE2"
+  FUNCTION = "GE"
+  EXPR = "return (a >= b);"
+-----
+  TAG = "OpEQ2"
+  FUNCTION = "EQ"
+  EXPR = "return (a == b);"
+-----
+  TAG = "OpNE2"
+  FUNCTION = "NE"
+  EXPR = "return (a != b);"
+
+binaryAssignOps
+-----
+  TAG      = "FnMinAssign"
+  FUNCTION = "minAssign"
+  EXPR     = "
+#if POOMA_NO_STD_MIN_MAX
+        const_cast<T1 &>(a) = (a<b?a:b)
+#else
+        const_cast<T1 &>(a) = std::min(a, b)
+#endif
+;
+    return const_cast<T1 &>(a);"
+-----
+  TAG      = "FnMaxAssign"
+  FUNCTION = "maxAssign"
+  EXPR     = "
+#if POOMA_NO_STD_MIN_MAX
+        const_cast<T1 &>(a) = (a>b?a:b)
+#else
+        const_cast<T1 &>(a) = std::max(a, b)
+#endif
+;
+    return const_cast<T1 &>(a);"
+
+binaryAssignBoolOps
+-----
+  TAG      = "FnAndAssign"
+  FUNCTION = "andAssign"
+  EXPR     = "const_cast<T1 &>(a) = (a && b);
+    return const_cast<T1 &>(a);"
+-----
+  TAG      = "FnOrAssign"
+  FUNCTION = "orAssign"
+  EXPR     = "const_cast<T1 &>(a) = (a || b);
+    return const_cast<T1 &>(a);"
+

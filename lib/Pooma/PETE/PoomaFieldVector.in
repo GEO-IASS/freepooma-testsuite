@@ -1,0 +1,30 @@
+prefix
+-----
+TEXT = "
+template<class G, class T, class E> class Field;
+
+#undef MakeReturn
+#define MakeReturn MakeFieldReturn
+"
+
+suffix
+-----
+TEXT = "
+#undef MakeReturn
+"
+
+classes
+-----
+  ARG   = "class G[n],class T[n],class E[n]"
+  CLASS = "Field<G[n],T[n],E[n]>"
+
+scalars
+-----
+  ARG   = "int D[n],class T[n],class E[n]"
+  CLASS = "Vector<D[n],T[n],E[n]>"
+-----
+  ARG   = "int D[n],class T[n],class E[n]"
+  CLASS = "Tensor<D[n],T[n],E[n]>"
+-----
+  ARG   = "int DR[n],int DC[n],class T[n],class E[n]"
+  CLASS = "TinyMatrix<DR[n],DC[n],T[n],E[n]>"

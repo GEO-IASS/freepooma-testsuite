@@ -1,0 +1,33 @@
+# Default path for application executables
+#
+set POOMA_PATH $env(PWD)/$env(POOMASUITE)
+
+# Register the POOMA programs
+#
+paws register program test1 \* $POOMA_PATH/paws_test1 1
+paws register program test2 \* $POOMA_PATH/paws_test2 1
+paws register program test3 \* $POOMA_PATH/paws_test3 1
+paws register program test4 \* $POOMA_PATH/paws_test4 1
+paws register program test5 \* $POOMA_PATH/paws_test5 1
+paws register program test6 \* $POOMA_PATH/paws_test6 1
+paws register program test7 \* $POOMA_PATH/paws_test7 1
+paws register program test8 \* $POOMA_PATH/paws_test8 1
+
+# Register the hosts
+#
+paws register host n01		SGI64 128
+paws register host n02 	        SGI64 128
+paws register host dunwich	LINUX  2
+paws register host peak00	LINUX  2
+paws register host peak01	LINUX  2
+paws register host peak02	LINUX  2
+paws register host peak03	LINUX  2
+paws register host lbp01 	LINUX  2
+paws register host lbp02 	LINUX  2
+paws register host lbp03 	LINUX  2
+paws register host lbp04 	LINUX  2
+paws register host lbp05 	LINUX  2
+paws register host lbp06 	LINUX  2
+paws register host lbp07 	LINUX  2
+paws register host lbp08 	LINUX  2
+

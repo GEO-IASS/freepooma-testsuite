@@ -1,0 +1,1 @@
+-ftemplate-depth-60 -Drestrict=__restrict__ -DNOPAssert -DNOCTAssert -IREPLACE_SOURCEDIR_HERE/lib

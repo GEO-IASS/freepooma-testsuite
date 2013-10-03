@@ -1,0 +1,15 @@
+classes
+-----
+  ARG   = "class T[n],class E[n]"
+  CLASS = "DynamicArray<T[n],E[n]>"
+
+scalars
+-----
+  ARG   = "int D[n],class T[n],class E[n]"
+  CLASS = "Vector<D[n],T[n],E[n]>"
+-----
+  ARG   = "int D[n],class T[n],class E[n]"
+  CLASS = "Tensor<D[n],T[n],E[n]>"
+-----
+  ARG   = "int DR[n],int DC[n],class T[n],class E[n]"
+  CLASS = "TinyMatrix<DR[n],DC[n],T[n],E[n]>"

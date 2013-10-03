@@ -1,0 +1,11 @@
+This directory contains some input files that are used to build the
+operator definitions needed by Pooma to use PETE.  The file that get built are:
+Array/ArrayOperators.h
+Pooma/PoomaOperators.h
+Pooma/VectorOperators.h
+
+These files can be in this directory with the makefile and then you need
+to move them to the appropriate locations.  To use the makefile, you need
+to have PETE installed and set the environment variables PETEDIR which
+points to the PETE installation and PETEARCHDIR which specifies the
+architecture directory (sgi64 for example).

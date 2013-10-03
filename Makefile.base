@@ -1,0 +1,22 @@
+DIFF = 'PS_cmp.py -T @ -u ?'
+TV_RUN_TIME_LIMIT  ?= 150
+TV_COMP_TIME_LIMIT ?= 400
+
+poomaOBJS = \
+LuxAppPointer.cmpl.o PawsAppPointer.cmpl.o Connection.cmpl.o DataBrowser.cmpl.o \
+DomainCalculus.cmpl.o DiskLayout.cmpl.o DiskMeta.cmpl.o FileSetReader.cmpl.o \
+MetaTokenIterator.cmpl.o DynamicLayout.cmpl.o GlobalIDDataBase.cmpl.o \
+RelationGroups.cmpl.o FieldCentering.cmpl.o AttributeList.cmpl.o \
+ParticleBCList.cmpl.o UniformMapper.cmpl.o Pooma.cmpl.o SerialAsync.cmpl.o \
+Messaging.cmpl.o PatchSizeSyncer.cmpl.o Benchmark.cmpl.o Inform.cmpl.o \
+Options.cmpl.o PAssert.cmpl.o Pool.cmpl.o Statistics.cmpl.o Tester.cmpl.o \
+Unique.cmpl.o
+
+
+poomaLIB = libpooma-gcc.a
+
+$(poomaLIB) : $(poomaOBJS)
+	ar rc $(poomaLIB) $(poomaOBJS)
+	ranlib $(poomaLIB)
+
+$(filter %.P, $(TESTS)) : $(poomaLIB)

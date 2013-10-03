@@ -1,0 +1,6 @@
+PASSED ... array_test29
+### POOMA Assertion Failure ###
+### Not all of the pooled memory was freed!
+### File /home/kchang/qa/Suite_Home/FREEPOOMA/TESTS/compile_only/Utilities/Pool.cmpl.C; Line 73.
+Pooma::pAbort called.
+In default abort handler.

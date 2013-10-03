@@ -1,0 +1,63 @@
+binaryOps
+-----
+  TAG = "OpAdd"
+  FUNCTION = "operator+"
+  EXPR = "(a + b)"
+-----
+  TAG = "OpSubtract"
+  FUNCTION = "operator-"
+  EXPR = "(a - b)"
+-----
+  TAG = "OpMultiply"
+  FUNCTION = "operator*"
+  EXPR = "(a * b)"
+-----
+  TAG = "OpDivide"
+  FUNCTION = "operator/"
+  EXPR = "(a / b)"
+-----
+  TAG = "OpMod"
+  FUNCTION = "operator%"
+  EXPR = "(a % b)"
+-----
+  TAG = "OpBitwiseAnd"
+  FUNCTION = "operator&"
+  EXPR = "(a & b)"
+-----
+  TAG = "OpBitwiseOr"
+  FUNCTION = "operator|"
+  EXPR = "(a | b)"
+-----
+  TAG = "OpBitwiseXor"
+  FUNCTION = "operator^"
+  EXPR = "(a ^ b)"
+-----
+  TAG      = "FnDot"
+  FUNCTION = "dot"
+  EXPR     = "dot(a,b)"
+-----
+  TAG = "FnLdexp"
+  FUNCTION = "ldexp"
+  EXPR = "(ldexp(a,b))"
+-----
+  TAG = "FnPow"
+  FUNCTION = "pow"
+  EXPR = "(pow(a,b))"
+-----
+  TAG = "FnFmod"
+  FUNCTION = "fmod"
+  EXPR = "(fmod(a,b))"
+-----
+  TAG = "FnArcTan2"
+  FUNCTION = "atan2"
+  EXPR = "(atan2(a,b))"
+
+binaryBoolOps
+-----
+  TAG = "OpEQ"
+  FUNCTION = "operator=="
+  EXPR = "(a == b)"
+-----
+  TAG = "OpNE"
+  FUNCTION = "operator!="
+  EXPR = "(a != b)"

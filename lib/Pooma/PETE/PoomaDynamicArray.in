@@ -1,0 +1,9 @@
+classes
+-----
+  ARG   = "int D[n],class T[n],class E[n]"
+  CLASS = "Array<D[n],T[n],E[n]>"
+
+extraClasses
+-----
+  ARG   = "class T[n],class E[n]"
+  CLASS = "DynamicArray<T[n],E[n]>"

@@ -1,0 +1,6 @@
+classes
+-----
+  ARG   = "int D[n],class T[n],class E[n]"
+  CLASS = "Array<D[n],T[n],E[n]>"
+
+

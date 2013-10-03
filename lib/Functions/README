@@ -1,0 +1,8 @@
+RANDOM NUMBER GENERATORS
+------------------------
+
+In this directory are some files related to random
+number generators.  The current implementation is
+work in progress and this feature is undocumented
+and unsupported.  A supported interface will appear
+in a pooma release soon.

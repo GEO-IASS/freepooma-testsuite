@@ -1,0 +1,11 @@
+#!/bin/csh
+
+# Source this file to get these settings required for use of Siloon on
+# SGI N32 platforms.
+
+setenv PATH ${PATH}:/home/siloon/build/siloon-2.0/sgin32/bin
+
+setenv PYTHONPATH /home/pooma/packages/lux/siloon/sgin32
+
+setenv LD_LIBRARYN32_PATH ${LD_LIBRARYN32_PATH}:${PYTHONPATH}
+

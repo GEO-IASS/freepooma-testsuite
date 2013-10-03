@@ -1,0 +1,33 @@
+# psend -> precv
+#
+paws load resources.paws
+
+#set DEBUG 17
+
+set psend  [runPawsTask test7 $HOST 1]
+set precv  [runPawsTask test8 $HOST 1]
+
+# Connect programs
+connectPawsTasks $psend $precv
+
+# Connect datas
+# psend:s1 -> precv:s1
+# psend:s2 <- precv:s2
+# psend:iters -> precv:iters
+# psend:a1 -> precv:a1
+# psend:a2 -> precv:a2
+# psend:a3 -> precv:a3
+#
+connectPawsData [ paws get data $psend s1 ] [ paws get data $precv s1 ]
+connectPawsData [ paws get data $precv s2 ] [ paws get data $psend s2 ]
+connectPawsData [ paws get data $psend iters ] [ paws get data $precv iters ]
+connectPawsData [ paws get data $psend a1 ] [ paws get data $precv a1 ]
+connectPawsData [ paws get data $psend a2 ] [ paws get data $precv a2 ]
+connectPawsData [ paws get data $psend a3 ] [ paws get data $precv a3 ]
+
+# Then go......
+paws go $psend $precv
+
+paws show tasks
+
+paws show data

@@ -1,0 +1,35 @@
+add_library(pooma-gcc
+	lib/Connect/Lux/LuxAppPointer.cmpl.C
+	lib/Connect/Paws/PawsAppPointer.cmpl.C
+	lib/Connect/Connection.cmpl.C
+	lib/DataBrowser/DataBrowser.cmpl.C
+	lib/Domain/DomainCalculus.cmpl.C
+	lib/IO/DiskLayout.cmpl.C
+	lib/IO/DiskMeta.cmpl.C
+	lib/IO/FileSetReader.cmpl.C
+	lib/IO/MetaTokenIterator.cmpl.C
+	lib/Layout/DynamicLayout.cmpl.C
+	lib/Layout/GlobalIDDataBase.cmpl.C
+	lib/Field/Relations/RelationGroups.cmpl.C
+	lib/Field/FieldCentering.cmpl.C
+	lib/Particles/AttributeList.cmpl.C
+	lib/Particles/ParticleBCList.cmpl.C
+	lib/Partition/UniformMapper.cmpl.C
+	lib/Pooma/Pooma.cmpl.C
+	lib/Threads/IterateSchedulers/SerialAsync.cmpl.C
+	lib/Tulip/Messaging.cmpl.C
+	lib/Tulip/PatchSizeSyncer.cmpl.C
+	lib/Utilities/Benchmark.cmpl.C
+	lib/Utilities/Inform.cmpl.C
+	lib/Utilities/Options.cmpl.C
+	lib/Utilities/PAssert.cmpl.C
+	lib/Utilities/Pool.cmpl.C
+	lib/Utilities/Statistics.cmpl.C
+	lib/Utilities/Tester.cmpl.C
+	lib/Utilities/Unique.cmpl.C
+)
+
+include_directories(
+	include
+	lib
+)
